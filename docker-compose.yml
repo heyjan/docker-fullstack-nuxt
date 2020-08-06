@@ -1,0 +1,102 @@
+version: "3"
+
+services:
+  frontend:
+    build:
+      # Change for Dockerfile Prod & Dev
+      dockerfile: Dockerfile
+      context: ./frontend
+    container_name: heyjan-frontend
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    command: npm run dev
+    tty: true
+    stdin_open: true
+    depends_on:
+      - api
+    environment:
+      - HOST=realworld-docker.com
+    volumes:
+      - ./frontend/src:/usr/src/app/src
+    networks:
+      - docker-default
+
+  api:
+    build: ./api
+    container_name: heyjan-api
+    command: npm run start
+    restart: unless-stopped
+#    env_file:
+#      - .env
+    environment:
+      #      - MONGO_USERNAME=$MONGO_USERNAME
+      #      - MONGO_PASSWORD=$MONGO_PASSWORD
+      #      - MONGO_HOSTNAME=db
+      #      - MONGO_PORT=$MONGO_PORT
+      #      - MONGO_DB=$MONGO_DB
+      - PORT=3001
+      - HOST=0.0.0.0.
+      - MONGO_URL=mongodb://api_db:27017/api
+      - AUTH_API_URL=http://auth:3002/api
+#      - APOLLO_SERVER_HTTP= "http://server:4000"
+#      - APOLLO_CLIENT_HTTP= "http://localhost:4000"
+#      - APOLLO_SERVER_WS= "ws://server:4000"
+#      - APOLLO_CLIENT_WS= "ws://localhost:4000"
+    depends_on:
+      - api_db
+    networks:
+      - docker-default
+
+  auth:
+    build: ./auth
+    container_name: heyjan-auth
+    command: npm run start
+    restart: unless-stopped
+    environment:
+      - PORT=3002
+#      - HOST=http://realworld.com  / use only for redirect
+      - MONGO_URL=mongodb://auth_db:27017/auth
+      - API_URL=http://api:3001/api
+    depends_on:
+      - auth_db
+    networks:
+      - docker-default
+
+  auth_db:
+    image: mongo:latest
+    container_name: heyjan-auth-db
+    volumes:
+      - mongodb_auth:/data/db
+    networks:
+      - docker-default
+
+  api_db:
+    image: mongo:latest
+    container_name: heyjan-api-db
+    volumes:
+      - mongodb_api:/data/db
+    networks:
+      - docker-default
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: heyjan-nginx
+    ports:
+      - "80:80"
+    volumes:
+    - ./nginx/nginx.conf.prod:/etc/nginx/conf.d/nginx.conf
+    depends_on:
+      - frontend
+      - api
+      - auth
+    networks:
+      - docker-default
+
+volumes:
+  mongodb_api:
+  mongodb_auth:
+
+networks:
+  docker-default:
+    driver: bridge

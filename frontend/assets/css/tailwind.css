@@ -1,0 +1,66 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Noe Display';
+  src: url('../nd-bold.woff2') format('woff2'),
+    url('../nd-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Marat Sans';
+  src: url('../ms-light.woff2') format('woff2'),
+    url('../ms-light.woff') format('woff');
+  font-style: normal;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'Marat Sans', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+}
+.text {
+  font: 400 16px 'charter';
+  font-size: 22px;
+  line-height: 33px;
+  color: #042330;
+  font-style: normal;
+}
+h1 {
+  color: #042330;
+  font-family: 'Noe Display', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.nav-links a {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+}
+.nuxt-link-exact-active {
+  text-decoration: underline;
+}
+.container {
+  padding-left: 64px;
+  padding-top: 64px;
+}
+.app-container {
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template: auto 1fr auto / 1fr;
+}
+.app-content {
+  /*  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  align-items: center;
+  justify-items: center;*/
+}

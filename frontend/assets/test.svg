@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="simple-platform-a" x1="8.838%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#DEECFF"/>
+      <stop offset="100%" stop-color="#8BBBFF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FFF" fill-rule="nonzero" d="M19,37.9246431 L99,37.9246431 C100.656854,37.9246431 102,39.2677888 102,40.9246431 L102,102.924643 L16,102.924643 L16,40.9246431 C16,39.2677888 17.3431458,37.9246431 19,37.9246431 Z"/>
+    <rect width="56" height="52" x="43" y="47.925" fill="url(#simple-platform-a)" fill-rule="nonzero"/>
+    <rect width="24" height="52" x="19" y="47.925" fill="#4894FF" fill-rule="nonzero"/>
+    <rect width="14" height="2" x="23" y="55.925" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="10" height="2" x="23" y="63.925" fill="#FFF" fill-rule="nonzero"/>
+    <rect width="30" height="3" x="48" y="63.925" fill="#0069FF" fill-rule="nonzero"/>
+    <rect width="14" height="3" x="56" y="71.925" fill="#0069FF" fill-rule="nonzero"/>
+    <rect width="8" height="3" x="74" y="71.925" fill="#0069FF" fill-rule="nonzero"/>
+    <rect width="14" height="3" x="48" y="80.925" fill="#0069FF" fill-rule="nonzero"/>
+    <rect width="22" height="3" x="66" y="80.925" fill="#0069FF" fill-rule="nonzero"/>
+    <path stroke="#0069FF" stroke-width="2" d="M19,37.9246431 L99,37.9246431 C100.656854,37.9246431 102,39.2677888 102,40.9246431 L102,102.924643 L16,102.924643 L16,40.9246431 C16,39.2677888 17.3431458,37.9246431 19,37.9246431 Z"/>
+    <path fill="#8FBEFF" fill-rule="nonzero" stroke="#0069FF" stroke-width="2" d="M8,102.924643 L8,106.924643 C8,108.029213 8.8954305,108.924643 10,108.924643 L108,108.924643 C109.104569,108.924643 110,108.029213 110,106.924643 L110,102.924643 L8,102.924643 Z"/>
+    <path fill="#0069FF" fill-rule="nonzero" d="M52,101.924643 L67,101.924643 L67,106.924643 C67,108.581497 65.6568542,109.924643 64,109.924643 L55,109.924643 C53.3431458,109.924643 52,108.581497 52,106.924643 L52,101.924643 Z"/>
+    <ellipse cx="22.502" cy="43.425" fill="#8FBEFF" fill-rule="nonzero" rx="1.502" ry="1.5"/>
+    <ellipse cx="30.502" cy="43.425" fill="#8FBEFF" fill-rule="nonzero" rx="1.502" ry="1.5"/>
+    <ellipse cx="38.502" cy="43.425" fill="#8FBEFF" fill-rule="nonzero" rx="1.502" ry="1.5"/>
+    <polyline stroke="#8FBEFF" stroke-width="2" points="4 66.925 6.849 69.925 4 72.925"/>
+    <rect width="4" height="2" x="8" y="71.925" fill="#8FBEFF" fill-rule="nonzero"/>
+    <path stroke="#0069FF" stroke-width="2" d="M110.524279 84.4489221L110.524279 87.9732011 110.524279 84.4489221 107 84.4489221 110.524279 84.4489221zM110.524279 84.4489221L110.524279 80.9246431 110.524279 84.4489221 114.048558 84.4489221 110.524279 84.4489221zM16 22.9246431L16 26.9246431 16 22.9246431 12 22.9246431 16 22.9246431zM16 22.9246431L16 18.9246431 16 22.9246431 20 22.9246431 16 22.9246431z"/>
+    <polyline stroke="#120078" stroke-width="2" points="53.81 11 46.276 18.274 53.81 25.549"/>
+    <polyline stroke="#120078" stroke-width="2" points="70.386 11 77.92 18.274 70.386 25.549"/>
+    <path stroke="#120078" stroke-width="2" d="M64.3583482,11 L58.3309274,25.5489466"/>
+    <circle cx="97" cy="43.925" r="19" fill="#FFF" fill-rule="nonzero" stroke="#120078" stroke-width="2"/>
+    <polygon fill="#120078" points="93.157 52.477 87 46.143 89.209 43.869 93.051 47.822 104.449 34.925 106.76 37.087"/>
+  </g>
+</svg>
