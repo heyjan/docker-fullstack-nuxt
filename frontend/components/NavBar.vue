@@ -33,11 +33,11 @@ export default {
 header {
   grid-template: 105px / auto 1fr;
   z-index: 1;
-  background-image: linear-gradient(
-    to right,
-    hsl(169, 63%, 57%),
-    hsl(272, 83%, 64%)
-  );
+  /*background-image: linear-gradient(*/
+  /*  to right,*/
+  /*  hsl(280, 30%, 96%),*/
+  /*  hsl(47, 83%, 85%)*/
+  /*);*/
 }
 
 header::before {
@@ -50,11 +50,11 @@ header::before {
   left: 0;
   transition: opacity 0.5s linear;
   opacity: 0;
-  background-image: linear-gradient(
-    to right,
-    hsl(272, 83%, 64%),
-    hsl(169, 63%, 57%)
-  );
+  /*background-image: linear-gradient(*/
+  /*  to right,*/
+  /*  hsl(169, 34%, 74%),*/
+  /*  hsl(276, 22%, 95%)*/
+  /*);*/
 }
 
 header:hover::before {
@@ -66,7 +66,7 @@ header:hover::before {
 .drawer-toggle .bar {
   width: 90%;
   height: 2px;
-  background-color: white;
+  background-color: #000000;
 }
 .drawer-toggle {
   justify-self: end;
@@ -95,4 +95,7 @@ header:hover::before {
     display: none;
   }
 }
+
+/*hsl(272, 83%, 64%),*/
+/*hsl(169, 63%, 57%)*/
 </style>

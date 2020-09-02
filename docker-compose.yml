@@ -16,9 +16,11 @@ services:
     depends_on:
       - api
     environment:
-      - HOST=realworld-docker.com
+      - HOST=0.0.0.0.
     volumes:
-      - ./frontend/src:/usr/src/app/src
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/.nuxt
     networks:
       - docker-default
 

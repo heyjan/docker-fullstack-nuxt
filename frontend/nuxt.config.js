@@ -2,10 +2,6 @@ export default {
   server: {
     host: '0.0.0.0', // default: localhost
   },
-  devServer: {
-    port: 3000, // use any port suitable for your configuration
-    host: '0.0.0.0', // to accept connections from outside container
-  },
   mode: 'universal',
   /*
    ** Headers of the page
@@ -26,16 +22,6 @@ export default {
   /*
    ** Watcher Setting to get Hot Reloading in Containerized Docker
    */
-  watchers: {
-    chokidar: {
-      usePolling: true,
-      useFsEvents: false,
-    },
-    webpack: {
-      aggregateTimeout: 300,
-      poll: 1000,
-    },
-  },
   /*
    ** Customize the progress-bar color
    */
@@ -43,7 +29,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  tailwindcss: {
+    cssPath: '~/assets/scss/tailwind.scss',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    css: [],
+  },
+
   /*
    ** Plugins to load before mounting the App
    */
@@ -57,6 +50,7 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/apollo',
+    'nuxt-gsap',
   ],
   apollo: {
     clientConfigs: {

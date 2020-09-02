@@ -19,26 +19,41 @@
 }
 html,
 body {
+  width: 100%;
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 body {
   font-family: 'Marat Sans', sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: black;
 }
 .text {
-  font: 400 16px 'charter';
+  font: 400 16px 'Noe Display';
   font-size: 22px;
   line-height: 33px;
-  color: #042330;
+  color: #000000;
   font-style: normal;
 }
 h1 {
-  color: #042330;
+  color: #000000;
   font-family: 'Noe Display', sans-serif;
-  font-size: 16px;
   line-height: 1.5;
+  font-size: 1.875rem;
+}
+h2 {
+  color: #000000;
+  font-family: 'Marat Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+}
+h3 {
+  color: #000000;
+  font-family: 'Marat Sans', sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
 }
 .nav-links a {
   text-transform: uppercase;

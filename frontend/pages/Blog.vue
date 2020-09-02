@@ -15,4 +15,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  background-color: rgb(238, 202, 70);
+  height: available;
+}
+</style>
